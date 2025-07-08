@@ -12,12 +12,12 @@ def add_numbers(a:int ,b:int):
     return result
 
 
-
 Agent= Agent(
     name="Helpful Agent",
     instructions="""You are an helpful agent helping users to in what they want you have an add_numbers function that adds two numbers together. use it when you like""",
     tools=[
         add_numbers
+    
     ],  
     model_settings=ModelSettings( tool_choice="auto")  # Automatically use tools when needed
 )
