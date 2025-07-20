@@ -1,6 +1,6 @@
 from agents import Agent, Runner,  set_tracing_disabled 
 from dotenv import load_dotenv
-from config import run_config
+from config.run_config import run_config
 load_dotenv()
 set_tracing_disabled(True)
 

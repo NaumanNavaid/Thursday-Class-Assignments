@@ -1,6 +1,6 @@
 from agents import Agent, Runner, set_tracing_disabled, function_tool, ModelSettings
 from dotenv import load_dotenv
-from config import run_config
+from my_config.gemini_config import run_config
 
 load_dotenv()
 set_tracing_disabled(True)

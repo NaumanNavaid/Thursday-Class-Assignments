@@ -1,6 +1,6 @@
 from agents import Agent, Runner, set_tracing_disabled , function_tool
 from dotenv import load_dotenv
-from config import run_config
+from my_config.gemini_config import run_config
 import os
 import requests
 load_dotenv()
@@ -25,7 +25,6 @@ Agent= Agent(
     instructions="""You are a helpful weather bot. Your name is Mr. Weatherstein. to get the weather, use the get_weather function. """,
     tools=[get_weather],
 )
-
 prompt = input("Enter the city you want to know the weather for: ")
 result = Runner.run_sync(Agent, prompt , run_config=run_config  )
 print(result.final_output)
